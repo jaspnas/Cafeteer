@@ -8,7 +8,8 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/restaurants", handlers.RestaurantListHandler)
+	http.HandleFunc("/restaurant-list", handlers.RestaurantListHandler)
+	http.HandleFunc("/restaurant", handlers.RestaurantGetHandler)
 	if err := http.ListenAndServe(os.Getenv("SERVER_ADDR"), nil); err != nil {
 		log.Fatal(err)
 	}

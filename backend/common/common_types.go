@@ -15,8 +15,8 @@ type location struct {
 }
 
 type openingHours struct {
-	Opens  time.Time `json:"opens"`
-	Closes time.Time `json:"closes"`
+	Open  time.Time `json:"open"`
+	Close time.Time `json:"close"`
 }
 
 type RestaurantMetadata struct {
@@ -26,6 +26,19 @@ type RestaurantMetadata struct {
 	OpeningHours []openingHours `json:"opening_hours"`
 }
 
+type mealOption struct {
+	Name        string  `json:"name"`
+	Description string  `json:"description"`
+	Diets       string  `json:"diets"`
+	Price       float32 `json:"price"`
+}
+
+type dayMenu struct {
+	Date    time.Time    `json:"date"`
+	Options []mealOption `json:"options"`
+}
+
 type Restaurant struct {
 	Meta RestaurantMetadata `json:"meta"`
+	Menu []dayMenu
 }
