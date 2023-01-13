@@ -1,0 +1,54 @@
+:root{
+    --background-color: #FFFFFF;
+    --blue-accent: #CBF3F0;
+    --blue-shadow: #2EC4B6;
+    --orange-accent: #FFBF69;
+    --orange-shadow: #FF9F1C;
+    font-size: 1em;
+}
+
+.centerContent {
+  text-align: center;
+}
+
+.importantHeader {
+    font-weight: bold;
+    font-size: 4em;
+    color: var(--blue-shadow); 
+}
+
+.searchBarContainer {
+    text-align: center;
+    align-content: center;
+   /* background-color: var(--orange-shadow); */
+    padding-top: 1rem; 
+
+}
+
+.inputField {
+    width: 94%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    font-size: 24px;
+    text-align: center;
+    background-color: var(--orange-accent);
+
+}
+
+.restaurantBoxContainer {
+    gap: 5%;
+    padding: 2rem 0 1rem 0;
+    margin: 0 2rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: column;
+}
+
+.restaurantBox {
+    background-color: var(--blue-accent);
+    height: 20vh;
+    width: calc(100%/3);
+    
+}
